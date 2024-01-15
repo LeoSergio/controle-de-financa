@@ -93,3 +93,6 @@ const setItensBD = () =>
   localStorage.setItem("db_items", JSON.stringify(items));
 
 loadItens();
+function btnPrint(){
+  window.print();
+}

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root{
-    --background-color:rgb(241, 231, 231);
+    --background-color:rgb(255, 255, 255);
 }
 *{
     margin:0;
@@ -21,6 +21,7 @@ body{
    flex-wrap: wrap;
    padding:0 1rem ;
    border:1px solid rgb(0, 0, 0);
+   margin-top: 1px;
    
 }
 .header ul{
@@ -29,12 +30,17 @@ body{
     list-style: none;
     gap:1rem;
     font-size: .8em;
+    transition: transform 0.3s ease;
     
 }
 .header a{
     color:black;
     text-decoration: none;
     
+    
+}
+.header li:hover{
+    transform:translate(3px,3px);
 }
 section{
     padding:1rem;
@@ -131,4 +137,21 @@ i{
 .columnType{
     width:80px;
     text-align:center;
+}
+#btnPrint{
+    display:flex;
+    margin:auto;
+    margin-top:1rem;
+    padding:0.5rem;
+}
+@media print{
+    body{
+        font-size: 1.5em;
+    }
+    header{
+        display:none;
+    }
+    #btnPrint{
+        display:none;
+    }
 }
